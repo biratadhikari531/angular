@@ -1,0 +1,63 @@
+<p>data-binding works!</p>
+
+
+<table style="width:100%">
+    <tr>
+        <td>
+            <span>{{ courseName() }}</span>
+        </td>
+        <td>
+            <input type="text" value="{{ courseName() }}">
+        </td>
+    </tr>
+
+
+    <tr>
+        <td>
+            <input type="text" [value]="courseName()" [minLength]="minTestLength">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <span [class]="spanClassName">{{ courseName ()}}</span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{rollNo}}
+        </td>
+        <td>
+            <input type="text" [(ngModel)]="courseName">
+             <!-- <input
+  [ngModel]="courseName"
+  (ngModelChange)="courseName = $event"
+> -->
+        </td>
+    </tr>
+<tr>
+    <td>
+        <input type="checkbox" [(ngModel)]="isActive">
+    </td>
+</tr>
+{{isActive}}
+</table>
+
+<br>
+<hr>
+<table>
+    <tr>
+        <td>
+            <button (click)="onButtonClick()">Click me</button>
+        </td>
+        <td>
+            <select (change)="onOptionChange($event)">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+            </select>
+        </td>
+    </tr>
+
+
+</table>

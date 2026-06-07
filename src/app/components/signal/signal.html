@@ -1,0 +1,51 @@
+<p>signal works!</p>
+<button (click)="changeCourseName()">Change Course Name</button>
+<button (click)="changeCityList()">Change Array</button>
+<span>Course Name: {{ courseName() | json }}</span>
+<span>Student Object: {{ studentObj() | json }}</span>
+<span>City List: {{ cityList() | json }}</span>
+<input type="text" (input)="cahanegEmpId($event)" [(ngModel)]="cityname">
+<button (click)="addCity()">Add City</button>
+<span>Emp obj List: {{ empobj() | json }}</span>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<input type="text" (input)="chnageFormValue('name', $event)" [(ngModel)]="empobj().name">
+<input type="text" (input)="chnageFormValue('age', $event)" [(ngModel)]="empobj().age">
+<input type="text" (input)="chnageFormValue('department', $event)" [(ngModel)]="empobj().department">
+<span>Emp obj List: {{ empobj() | json }}</span>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<label for="fname">First name:</label><br>
+<input type="text" (input)="updateFName($event)" id="fname">
+<br>
+<br>
+<br>
+<label for="lname">Last name:</label><br>
+<input type="text" (input)="updateFName($event)" id="lname">
+<br>
+<br>
+<span>Full Name: {{ fullName() }}</span>    
+<input type="text" [value]="fullName()" readonly>
